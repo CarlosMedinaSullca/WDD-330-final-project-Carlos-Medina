@@ -1,6 +1,9 @@
 
-function renderWithTemplate(template, parentElement, ) {
+function renderWithTemplate(template, parentElement, callback ) {
     parentElement.insertAdjacentHTML("afterbegin", template);
+    if(callback) {
+        callback();
+    }
     
 }
 
