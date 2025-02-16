@@ -1,10 +1,7 @@
 
-function renderWithTemplate(template, parentElement, callback ) {
+function renderWithTemplate(template, parentElement) {
     parentElement.insertAdjacentHTML("afterbegin", template);
-    if(callback) {
-        callback();
-    }
-    
+        
 }
 
 async function loadTemplate(path) {
@@ -15,7 +12,7 @@ async function loadTemplate(path) {
 
 export async function loadHeaderFooter() {
     const headerElement = document.querySelector(".header");
-    const headerTemplate = await loadTemplate("../public/partials/header.html");
+    const headerTemplate = await loadTemplate("../partials/header.html");
     
     const footerElement = document.querySelector(".footer");
     const footerTemplate = await loadTemplate("../partials/footer.html");
