@@ -16,10 +16,10 @@ async function loadTemplate(path) {
 // This function is to render dynamically the header and footer for every html page where the fuction is called
 
 export async function loadHeaderFooter() {
-    const headerElement = document.querySelector(".header");
+    const headerElement = document.querySelector(".header-structure");
     const headerTemplate = await loadTemplate("../partials/header.html");
     
-    const footerElement = document.querySelector(".footer");
+    const footerElement = document.querySelector(".footer-structure");
     const footerTemplate = await loadTemplate("../partials/footer.html");
 
     renderWithTemplate(headerTemplate, headerElement);
