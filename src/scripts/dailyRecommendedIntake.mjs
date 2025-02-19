@@ -1,4 +1,14 @@
 
+function renderDRI(Carbo, Protein, Fiber, Fat) {
+    document.querySelector(".driResult").innerHTML= `
+    <h3>Daily recommended intake</h3>
+    <p>Carbohydrate: ${Carbo.toFixed(2)} grams per day</p>
+    <p>Protein: ${Protein.toFixed(2)} grams per day</p>
+    <p>Fiber: ${Fiber.toFixed(2)} grams per day</p>
+    <p>Fat: ${Fat.toFixed(2)} grams per day</p>
+    `;
+
+}
 
 export default class DailyRecommededIntake {
     constructor(sex, age, weight, height, activityLevel) {
@@ -9,10 +19,19 @@ export default class DailyRecommededIntake {
         this.activityLevel = activityLevel;
     }
 
+    init() {
+        const carbo =  this.calculateCarbohydrate();
+        const protein = this.calculateProtein();
+        const fiber = this.calculateFiber();
+        const fat = this.calculateFat();
+        
+        renderDRI(carbo, protein, fiber, fat);
+    }
+
     calculateBMR() {
         // BMR stands for Basal Metabolic rate
         let bmr = 0;
-        if(this.sex == "men") {
+        if(this.sex == "man") {
             bmr = 10 * this.weight + 6.25 * this.height - 5 * this.age + 5;
 
         } else {
