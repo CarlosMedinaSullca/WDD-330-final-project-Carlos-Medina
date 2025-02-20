@@ -1,5 +1,4 @@
-import { loadHeaderFooter, getParams} from "./utils.mjs";
+import { loadHeaderFooter} from "./utils.mjs";
 
 loadHeaderFooter();
 
-const category = getParams("category")

@@ -1,7 +1,81 @@
+:root {
+    --primary-color1: rgb(147, 191, 52);
+    --primary-color2: rgb(154, 191, 73);
+    --primary-color3: rgb(242, 226, 5);
+    --secondary-color1: rgb(166, 160, 86);
+    --secondary-color2: rgb(13, 13, 13);
+    --seconday-color3: rgb(255, 255, 255);
+
+    --paragraph-font: "Playfair Display", serif; 
+    --heading-font: "Roboto", sans-serif;
+}
+
 * {
+    font-family: var(--heading-font);
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header .icon {
+    padding: 1rem;
+
+}
+
+header .search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;  
+    background-color: var(--primary-color1);  
+}
+
+header .search h2 {
+    text-align: center;
+    color: var(--seconday-color3);
+}
+
+.inputContener {
+    display: flex;
+    border-radius: 20px;
+   
+    width: 80%;
+    align-items: center;
+    background-color: var(--seconday-color3);
+    padding: 0.5rem;     
+    
+}
+
+#searchbar {
+    /* width: 100%; */
+    padding: 0 15px;
+    flex: 1;
+    border: none;
+    outline: none;
+}
+
+#submit-search {
+    align-self: right;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 1rem;
+    
+}
+
+.searchForm {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;    
+    /* border: 1px solid red; */
 }
 
 img {
@@ -10,8 +84,128 @@ img {
 }
 
 .divider {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding:  2rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+main .functions,
+.food-category {
+    
+    color: var(--primary-color1);
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 320px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+main .functions img {
+    width: 60%;
+    height: auto;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color1);
+    padding: 2rem;
+    color: var(--seconday-color3);
+}
+
+.food-card {
+    list-style-type: none;
+    padding: 0.3rem;
+    
+}
+
+.food-card h2 {
+    color: var(--secondary-color1);
 
 }
+
+.dri-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.dri-form label {
+    /* display: block; */
+    padding-top: 1rem;
+    color: var(--secondary-color2);
+}
+
+
+.dri-form input[type="text"],
+.dri-form select,
+.dri-form input[type="submit"]
+ {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: 0.75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+    margin: 0.2rem 0;
+}
+
+
+.dri-form input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(var(--primary-color1), var(--primary-color2));
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    box-shadow: 1px 1px 4px #999;
+}
+
+.dri-form input:required {
+    border-left: solid 8px var(--secondary-color1);
+}
+
+.dri-form input:required:valid {
+    border-left: solid 8px var(--primary-color1);
+}
+
+.driResult h3 {
+    background-color: var(--primary-color1);
+    color: var(--seconday-color3);
+    text-align: center;
+    padding: 0.5rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.driResult p {
+    padding: 1rem;
+}
+
+
+@media screen and (min-width: 500px) {
+    main {
+      max-width: 1080px;
+      margin: auto;
+    }
+    
+    .principal {
+        display: grid;
+	    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
+
+
+  }

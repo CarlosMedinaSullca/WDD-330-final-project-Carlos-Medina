@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NutriPlan | Home</title>
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -14,7 +14,7 @@
   <body>
     <header class="header-structure"></header>
     <main class="divider">
-      <section class="form">
+      <section class="dri-form">
         <label for="sex"> Sex:
           <select name="sex" id="sex" required>
             <option value="man">Man</option>
@@ -25,10 +25,10 @@
           <input type="text" id="age" name="age" required>
         </label>
         <label for="weight"> Weight (kg): 
-          <input type="text" id="weight" name= weight>
+          <input type="text" id="weight" name= weight required>
         </label>
         <label for="height"> Height (cm): 
-          <input type="text" id="height" name= Height>
+          <input type="text" id="height" name= Height required>
         </label>
         <label for="activity"> Activity:
           <select name="activity" id="activity" required>
@@ -42,35 +42,6 @@
         <label for="submit">
           <input type="submit" id="submit" value="Calculate DRI">
         </label>
-        <!-- <form >
-          <label for="sex"> Sex:
-            <select name="sex" id="sex" required>
-              <option value="man">Man</option>
-              <option value="woman">Woman</option>
-            </select>
-          </label>
-          <label for="age">Age: 
-            <input type="text" id="age" name="age" required>
-          </label>
-          <label for="weight"> Weight (kg): 
-            <input type="text" id="weight" name= weight>
-          </label>
-          <label for="height"> Height (cm): 
-            <input type="text" id="height" name= Height>
-          </label>
-          <label for="activity"> Activity:
-            <select name="activity" id="activity" required>
-              <option value="sedentary" name="sedentary">Sedentary</option>
-              <option value="lightlyactive" name="lightlyactive">Lightly active</option>
-              <option value="moderateactive" name="moderateactive">Moderate active</option>
-              <option value="veryactive" name="veryactive">Very active</option>
-              <option value="extractive" name="extraactive">Extra active</option>
-            </select>
-          </label>
-          <label for="submit">
-            <input type="submit" id="submit" value="Calculate DRI">
-          </label>
-        </form> -->
       </section>
       <section class="driResult">
       </section>
