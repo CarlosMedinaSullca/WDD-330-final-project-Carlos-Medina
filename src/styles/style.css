@@ -109,6 +109,24 @@ main .functions,
     padding: 2rem;
 }
 
+
+.functions:hover,
+.food-category:hover {
+    animation : border infinite 2s;
+}
+
+@keyframes border {
+    0% {
+        border: 0px solid var(--primary-color1);
+    }
+    50% {
+        border: 1px solid var(--primary-color1);
+    }
+    100% {
+        border: 1px solid var(--primary-color1);
+    }
+}
+
 main .functions img {
     width: 60%;
     height: auto;
@@ -135,6 +153,20 @@ footer {
 
 }
 
+.food-card h2:hover {
+    animation: color 1s;
+}
+
+@keyframes color {
+    0% {
+        color: var(--secondary-color1);
+    }
+    
+    100% {
+        color: var(--secondary-color2);
+    }
+}
+
 .dri-form {
     display: flex;
     flex-direction: column;
@@ -143,7 +175,7 @@ footer {
 .dri-form label {
     /* display: block; */
     padding-top: 1rem;
-    color: var(--secondary-color2);
+    color: var(--secondary-color1);
 }
 
 
@@ -151,12 +183,12 @@ footer {
 .dri-form select,
 .dri-form input[type="submit"]
  {
-    background-color: #eee;
+    background-color: var(--seconday-color3);
     display: block;
-    border: solid 1px #999;
+    border: solid 1px var(--secondary-color1);
     border-radius: 6px;
     padding: 0.75rem;
-    color: #555;
+    color: var(--secondary-color2);
     width: 100%;
     max-width: 400px;
     appearance: none;
@@ -181,6 +213,11 @@ footer {
     border-left: solid 8px var(--primary-color1);
 }
 
+.dri-form input:focus,
+.dri-form select:focus {
+    box-shadow: 4px 4px 8px var(--secondary-color1);
+}
+
 .driResult h3 {
     background-color: var(--primary-color1);
     color: var(--seconday-color3);
@@ -192,6 +229,11 @@ footer {
 
 .driResult p {
     padding: 1rem;
+}
+
+.driResult p:hover {
+    padding: 1rem;
+    animation: border 3s;
 }
 
 
